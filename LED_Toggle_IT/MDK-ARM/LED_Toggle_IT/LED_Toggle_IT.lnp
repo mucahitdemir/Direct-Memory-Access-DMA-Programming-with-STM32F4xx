@@ -1,0 +1,25 @@
+--cpu=Cortex-M4.fp.sp
+"led_toggle_it\startup_stm32f407xx.o"
+"led_toggle_it\main.o"
+"led_toggle_it\stm32f4xx_it.o"
+"led_toggle_it\stm32f4xx_hal_msp.o"
+"led_toggle_it\stm32f4xx_hal_tim.o"
+"led_toggle_it\stm32f4xx_hal_tim_ex.o"
+"led_toggle_it\stm32f4xx_hal_rcc.o"
+"led_toggle_it\stm32f4xx_hal_rcc_ex.o"
+"led_toggle_it\stm32f4xx_hal_flash.o"
+"led_toggle_it\stm32f4xx_hal_flash_ex.o"
+"led_toggle_it\stm32f4xx_hal_flash_ramfunc.o"
+"led_toggle_it\stm32f4xx_hal_gpio.o"
+"led_toggle_it\stm32f4xx_hal_dma_ex.o"
+"led_toggle_it\stm32f4xx_hal_dma.o"
+"led_toggle_it\stm32f4xx_hal_pwr.o"
+"led_toggle_it\stm32f4xx_hal_pwr_ex.o"
+"led_toggle_it\stm32f4xx_hal_cortex.o"
+"led_toggle_it\stm32f4xx_hal.o"
+"led_toggle_it\stm32f4xx_hal_exti.o"
+"led_toggle_it\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "LED_Toggle_IT\LED_Toggle_IT.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "LED_Toggle_IT.map" -o LED_Toggle_IT\LED_Toggle_IT.axf

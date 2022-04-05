@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp.sp
+"uart_to_sram\startup_stm32f407xx.o"
+"uart_to_sram\main.o"
+"uart_to_sram\stm32f4xx_it.o"
+"uart_to_sram\stm32f4xx_hal_msp.o"
+"uart_to_sram\stm32f4xx_hal_tim.o"
+"uart_to_sram\stm32f4xx_hal_tim_ex.o"
+"uart_to_sram\stm32f4xx_hal_uart.o"
+"uart_to_sram\stm32f4xx_hal_rcc.o"
+"uart_to_sram\stm32f4xx_hal_rcc_ex.o"
+"uart_to_sram\stm32f4xx_hal_flash.o"
+"uart_to_sram\stm32f4xx_hal_flash_ex.o"
+"uart_to_sram\stm32f4xx_hal_flash_ramfunc.o"
+"uart_to_sram\stm32f4xx_hal_gpio.o"
+"uart_to_sram\stm32f4xx_hal_dma_ex.o"
+"uart_to_sram\stm32f4xx_hal_dma.o"
+"uart_to_sram\stm32f4xx_hal_pwr.o"
+"uart_to_sram\stm32f4xx_hal_pwr_ex.o"
+"uart_to_sram\stm32f4xx_hal_cortex.o"
+"uart_to_sram\stm32f4xx_hal.o"
+"uart_to_sram\stm32f4xx_hal_exti.o"
+"uart_to_sram\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "UART_to_SRAM\UART_to_SRAM.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "UART_to_SRAM.map" -o UART_to_SRAM\UART_to_SRAM.axf
