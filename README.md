@@ -12,3 +12,7 @@ to replace DRAMs in systems that require very low power consumption. In the firs
 interfacing between DRAMs and the CPU.
 
 There will be additional examples of ADC with DMA, USART with DMA exercises.
+**M2P, P2M**
+The peripheral to memory DMA operates according to the following steps: Microprocessor writes to DMA controller and peripheral device
+to request particular DMA operation. When peripheral device is ready, it sends a DMA request signal to DMA controller. 
+DMA controller requests CPU for buses (Hold Request)
