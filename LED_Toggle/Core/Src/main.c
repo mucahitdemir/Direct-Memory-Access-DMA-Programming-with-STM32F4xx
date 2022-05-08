@@ -1,22 +1,4 @@
-/* USER CODE BEGIN Header */
-/**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; Copyright (c) 2022 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/BSD-3-Clause
-  *
-  ******************************************************************************
-  */
-/* USER CODE END Header */
+
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
@@ -103,7 +85,7 @@ int main(void)
     /* USER CODE BEGIN 3 */
 		
 		HAL_DMA_Start(&hdma_memtomem_dma2_stream0,(uint32_t)&LED_data[0],(uint32_t)&GPIOD->ODR,1);
-		HAL_DMA_PollForTransfer(&hdma_memtomem_dma2_stream0,HAL_DMA_FULL_TRANSFER,HAL_MAX_DELAY);
+		HAL_DMA_PollForTransfer(&hdma_memtomem_dma2_stream0,HAL_DMA_FULL_TRANSFER,HAL_MAX_DELAY); //polling is the least efficient way in power saving
 
 		/*delay of 1 sec*/
 		current_ticks = HAL_GetTick();
